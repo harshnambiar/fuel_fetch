@@ -52,6 +52,13 @@ async function fetch_tx(add){
         console.log('fetch error for transactions');
     }
 
+
+
+
+}
+
+async function fetch_assets(add){
+
     const url2 = 'https://app.fuel.network/account/'.concat(add).concat('/assets');
     try {
         const response2 = await axios.get(url2);
@@ -84,3 +91,4 @@ async function fetch_tx(add){
 
 
 await fetch_tx(add);
+await fetch_assets(add);
